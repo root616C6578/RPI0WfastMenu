@@ -15,4 +15,4 @@ cd st7735
 sudo python3 setup.py install
 ```
 https://www.waveshare.com/wiki/1.44inch_LCD_HAT
-# There will be a 433MHz transmitter and reciever PS 3 option)
+# There will be a 433MHz transmitter and reciever in the future. PS 3 option)
