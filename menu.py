@@ -136,7 +136,7 @@ while True:
                             if button_state_JUP == GPIO.LOW and f < 107.9:
                                 f += 0.1
                                 f = round(f, 1)
-                                draw.text((30, 20), f"frequency: {f:.1f} MHz", font=font, fill="white")
+                                draw.text((30, 20), f"freq: {f:.1f} MHz", font=font, fill="white")
                                 time.sleep(0.01)
                     
                             if button_state_JDOWN == GPIO.LOW and f > 87.5:
@@ -173,10 +173,10 @@ while True:
                             # Обробка кнопок
                             if button_state_UP == GPIO.LOW:
                                 cursor_wav = (cursor_wav - 1) % len(listopt)
-                                time.sleep(0.1)  
+                                time.sleep(0.01)  
                             if button_state_DOWN == GPIO.LOW:
                                 cursor_wav = (cursor_wav + 1) % len(listopt)
-                                time.sleep(0.1)
+                                time.sleep(0.01)
                             if button_state_SELECT == GPIO.LOW:
                                 selected_file = wavfiles[cursor_wav]
                                 print(f"Selected WAV file: {selected_file}")
@@ -186,8 +186,8 @@ while True:
 
                     if fm_opt[cursor] == "start attack":
                         draw.rectangle((0, 0, 160, 128), outline="black", fill="black")
-                        draw.text((40,20), f"attacking {fm}MHz",fill="white")
-                        draw.text((40,30), f"file: {selected_file}", fill='white')
+                        draw.text((30,20), f"attack {fm}MHz",fill="white")
+                        draw.text((30,30), f"file: {selected_file}", fill='white')
                         disp.display(img)
                         print(fm)
                         print(selected_file)
@@ -214,6 +214,7 @@ while True:
             subprocess.Popen(command)
             cursor = 0
 
-        time.sleep(250)
+            time.sleep(250)
         if listopt[cursor] == "l2ping":
             None # I can't continue for technical reasons P.S. I broke the sd card into two parts🤣❤
+            time.sleep(2)
