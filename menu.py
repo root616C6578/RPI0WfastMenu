@@ -102,9 +102,9 @@ while True:
                 y = 20 
                 for i, op in enumerate(fm_opt):
                     if i == cursor:
-                        draw.text((65.5, y), f"> {op}", font=font, fill="white")  # Вибраний елемент
+                        draw.text((30, y), f"> {op}", font=font, fill="white")  # Вибраний елемент
                     else:
-                        draw.text((65.5, y), f"  {op}", font=font, fill="white") 
+                        draw.text((30, y), f"  {op}", font=font, fill="white") 
                     y += 20
                 disp.display(img)  # Оновлення екран  
 
