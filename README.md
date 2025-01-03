@@ -3,14 +3,14 @@ For correct working need Raspberry Pi OS(Legacy, 32Bit)
 Download ST7735 lib
 ```
 sudo apt update
-sudo apt update && sudo apt install -y python3 python3-pip python3-pil python3-rpi.gpio && pip3 install st7735
+sudo apt update && sudo apt install -y python3 python3-pip python3-pil python3-rpi.gpio && sudo pip3 install st7735 && sudo pip3 install gpiod && sudo pip3 install gpiodevice
 
 sudo apt update
 sudo apt install -y python3-libgpiod gpiod
 sudo apt install python3-spidev
-pip3 install RPi.GPIO
-pip3 install Pillow
-pip3 install st7735
+sudo pip3 install RPi.GPIO
+sudo pip3 install Pillow
+sudo pip3 install st7735
 
 sudo raspi-config
 
